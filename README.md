@@ -6,7 +6,8 @@ Task Manager is an efficient platform designed to help users manage their tasks 
 **Soreti Oumar**       UGR/4795/15
 **Nuhamien Tariku**    UGR/2940/15
 **Tesfanesh Asefa**    UGR/1233/15
-**Estifanos Tadesse**  UGR/4002/15 
+**Estifanos Tadesse**  UGR/4002/15
+/table
 
  
 
