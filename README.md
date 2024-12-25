@@ -3,11 +3,11 @@
 Task Manager is an efficient platform designed to help users manage their tasks and improve productivity. It offers a user-friendly interface for creating, updating, and tracking tasks. The system ensures secure access through JWT Token-based authentication and authorization, with user and role management to cater to different user needs.
 ##Group Members 
 ## Group Members 
-**Soreti Oumar**       UGR/4795/15
-**Nuhamien Tariku**    UGR/2940/15
-**Tesfanesh Asefa**    UGR/1233/15
-**Estifanos Tadesse**  UGR/4002/15
-/table
+## Soreti Oumar       UGR/4795/15
+## Nuhamien Tariku    UGR/2940/15
+## Tesfanesh Asefa    UGR/1233/15
+## Estifanos Tadesse  UGR/4002/15
+
 
  
 
