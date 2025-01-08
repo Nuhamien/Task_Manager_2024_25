@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .task-card {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Task Manager</h1>
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <button class="btn btn-primary" id="addTaskBtn">Add Task</button>
+            <button class="btn btn-warning" id="updateTaskBtn">Update Task</button>
+            <button class="btn btn-danger" id="deleteTaskBtn">Delete Task</button>
+            <button class="btn btn-success" id="completedTaskBtn">Completed Tasks</button>
+        </div>
+        <div id="taskList">
+            <!-- Tasks will be listed here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('addTaskBtn').addEventListener('click', () => {
+            let task = prompt('Enter a new task:');
+            if (task) {
+                let taskElement = document.createElement('div');
+                taskElement.classList.add('task-card', 'card', 'p-2');
+                taskElement.innerHTML = `
+                    <div class="d-flex justify-content-between">
+                        <span>${task}</span>
+                        <button class="btn btn-sm btn-danger" onclick="this.parentElement.parentElement.remove()">Delete</button>
+                    </div>
+                `;
+                document.getElementById('taskList').appendChild(taskElement);
+            }
+        });
+
+        document.getElementById('updateTaskBtn').addEventListener('click', () => {
+            let tasks = document.querySelectorAll('#taskList .task-card span');
+            if (tasks.length === 0) {
+                alert('No tasks to update!');
+                return;
+            }
+            let taskIndex = prompt('Enter task number to update (1-based index):');
+            if (taskIndex && tasks[taskIndex - 1]) {
+                let newTask = prompt('Enter new task description:');
+                if (newTask) tasks[taskIndex - 1].innerText = newTask;
+            }
+        });
+
+        document.getElementById('deleteTaskBtn').addEventListener('click', () => {
+            let tasks = document.querySelectorAll('#taskList .task-card');
+            if (tasks.length === 0) {
+                alert('No tasks to delete!');
+                return;
+            }
+            let taskIndex = prompt('Enter task number to delete (1-based index):');
+            if (taskIndex && tasks[taskIndex - 1]) {
+                tasks[taskIndex - 1].remove();
+            }
+        });
+
+        document.getElementById('completedTaskBtn').addEventListener('click', () => {
+            let tasks = document.querySelectorAll('#taskList .task-card span');
+            if (tasks.length === 0) {
+                alert('No tasks to mark as completed!');
+                return;
+            }
+            let taskIndex = prompt('Enter task number to mark as completed (1-based index):');
+            if (taskIndex && tasks[taskIndex - 1]) {
+                tasks[taskIndex - 1].style.textDecoration = 'line-through';
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
