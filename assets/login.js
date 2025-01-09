@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Store the JWT token (if provided) in localStorage or cookies
           localStorage.setItem('token', result.access_token);
   
-          // Redirect to the task page
+          // Redirect to the Task page
           window.location.href = 'index.html';
         } else {
           const error = await response.json();
