@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",  // Add this line to specify the output directory
+    "skipLibCheck": true,
+    "strict": true,
+    "allowJs": true,
+    "checkJs": true, // Optional, adds error-checking for JavaScript files
+    "moduleResolution": "node",
+  },
+  "include": [
+    "assets/fetch-api.js" // Include the JS file for type checking
+  ]
+}

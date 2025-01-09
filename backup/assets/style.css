@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  .card{
+    margin-bottom: 20px;
+  }
